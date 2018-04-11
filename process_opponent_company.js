@@ -21,6 +21,7 @@ function loadVideoDiv() {
 
 if (hasGetUserMedia()) {
 	alert('woohoo')
+	loadVideoDiv()
 } else {
 	alert('getUserMedia() is not supported by your browser');
 }
