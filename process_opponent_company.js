@@ -31,7 +31,7 @@ function loadVideoDiv() {
 }
 
 function gotStream(stream) {
-  videoElement.srcObject = stream;
+	video.srcObject = stream;
 }
 
 function getStream() {
