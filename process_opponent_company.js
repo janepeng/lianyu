@@ -8,7 +8,9 @@ function loadVideoDiv() {
 	// put div in dom
 	$(videoDiv).insertAfter('.table:first');
 
-	const constraints = { video: true };
+	const constraints = {
+		video: {width: {min: 1280}, height: {min: 720}}
+	};
 	const video = document.querySelector('video');
 
 	navigator.mediaDevices.getUserMedia(constraints)
@@ -21,7 +23,7 @@ function loadVideoDiv() {
 
 if (hasGetUserMedia()) {
 	alert('woohoo')
-	loadVideoDiv()
+	loadVideoDiv();
 } else {
 	alert('getUserMedia() is not supported by your browser');
 }
