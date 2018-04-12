@@ -3,9 +3,7 @@ function hasGetUserMedia() {
 }
 
 var videoDiv = '<video autoplay></video>';
-var videoDropdown = '<div class="select">
-	<label for="videoSource">Video source: </label><select id="videoSource"></select>
-	</div>';
+var videoDropdown = '<div class="select"><label for="videoSource">Video source: </label><select id="videoSource"></select></div>';
 var img = '<img src="">';
 var canvas = '<canvas style="display:none;"></canvas>';
 
