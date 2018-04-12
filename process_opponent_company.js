@@ -36,9 +36,6 @@ function gotStream(stream) {
 
 function getStream() {
   var constraints = {
-    audio: {
-      deviceId: {exact: audioSelect.value}
-    },
     video: {
       deviceId: {exact: videoSelect.value}
     }
