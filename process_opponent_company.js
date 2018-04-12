@@ -11,7 +11,7 @@ var canvas = '<canvas style="display:none;"></canvas>';
 $(videoDropdown).insertAfter('.table:first');
 $(videoDiv).insertAfter('.table:first');
 
-const constraints = {
+var constraints = {
 	video: {width: {min: 360}, height: {min: 360}}
 };
 const video = document.querySelector('video');
@@ -35,11 +35,7 @@ function gotStream(stream) {
 }
 
 function getStream() {
-  var constraints = {
-    video: {
-      deviceId: {exact: videoSelect.value}
-    }
-  };
+  constraints.video.deviceId = {exact: videoSelect.value};
 
   navigator.mediaDevices.getUserMedia(constraints).
     then(gotStream);
